@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>КиsлыйМаркет</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 0;
+            color: #AEF284;
+            text-align: right;
+        }
+
+        nav {
+            background-color: white;
+            padding: 10px;
+            text-align: right;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 10px;
+        }
+        main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #AEF284;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-image {
+             text-align: left;
+             justify-content: left;
+             margin: 10px;
+             text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>КиsлыйМаркет
+    <profile-image>
+       <a href="#"> <img th:src="@{/images/profile.png}" width="50" height="50"/> </a>
+   </profile-image>
+    </h1>
+</header>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <a href="/admin">Con1tact</a>
+    <a href="adminPages/admin">Cont2act</a>
+    <a href="/adminPages/admin">Con3tact</a>
+
+    <form action="/logout" method="post">
+        <input type="submit" value="Logout">
+    </form>
+</nav>
+<main>
+    <h2>Welcome to Apple Shop</h2>
+    <p>Lorem imyutdgru6jehrftytkyjrhrtgrpsum dolor sit amet, consectetur adipiscing elit. Ut malesuada lacus et nisi volutpat, ut volutpat massa pellentesque.</p>
+    <p>Suspendisse elit nunc, vestibulum eget mi non, sollicitudin finibus sapien. Nullam tempus, dolor in sodales mattis, turpis augue dignissim mi, rutrum sodales leo dui vehicula urna.</p>
+</main>
+<footer>
+    &copy; 2023 КиsлыйМаркет. All rights reserved.
+</footer>
+</body>
+
+</html>
